@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block py-3
+    px-6
+    text-neutral-800
+    transition
+    ease-in
+    duration-200
+    text-center text-base
+    hover:shadow-md
+    focus:outline-none focus:ring-offset-2 focus:ring-2 
+    rounded;
+  }
+  /* solid */
+  .btn-primary {
+    @apply bg-primary-500 shadow
+    hover:bg-primary-300
+    focus:ring-primary-300 focus:ring-offset-primary-100;
+  }
+
+  .btn-secondary {
+    @apply shadow text-white bg-secondary-500
+    hover:bg-secondary-300
+    focus:ring-secondary-300 focus:ring-offset-secondary-100;
+  }
+
+  .btn-light {
+    @apply shadow bg-neutral-50
+    hover:bg-white
+    focus:ring-neutral-100 focus:ring-offset-neutral-50;
+  }
+
+  /* outline */
+  .btn-outline-primary {
+    @apply text-primary-500 border-primary-500 border hover:bg-primary-500 hover:text-neutral-800 focus:ring-primary-300 focus:ring-offset-primary-100;
+  }
+
+  .btn-outline-secondary {
+    @apply border border-secondary-500 text-secondary-500
+    hover:bg-secondary-500 hover:text-white focus:ring-secondary-300 focus:ring-offset-secondary-100;
+  }
+
+  .btn-outline-light {
+    @apply border border-neutral-100
+    hover:bg-neutral-50 hover:border-neutral-50 focus:ring-neutral-100 focus:ring-offset-neutral-50;
+  }
+
+  /* size */
+  .btn-lg {
+    @apply py-4 px-8;
+  }
+
+  .btn-sm {
+    @apply py-2
+    px-6;
+  }
+}
