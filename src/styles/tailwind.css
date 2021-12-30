@@ -59,3 +59,44 @@
     px-6;
   }
 }
+
+@layer base {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full
+            appearance-none
+            border border-neutral-200
+            py-3
+            px-4
+            rounded
+            bg-white
+            text-neutral-800
+            placeholder-neutral-500
+            text-base
+            shadow-none
+            focus:border-primary-500
+            focus:outline-none
+            focus:ring-0
+            transition
+            ease-in
+            duration-200;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply rounded-sm border-neutral-200 text-primary-500 focus:ring-primary-300;
+  }
+}
